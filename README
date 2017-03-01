@@ -1,0 +1,5 @@
+Diese Vorlage basiert in leichten Grundzügen noch auf dieser, bereits bestehenden Vorlage:
+https://martin-thoma.com/latex-vorlage-fur-den-semesterbericht-der-studienstiftung/
+
+Zum kompilieren wird noch die Datei lastpage.sty benötigt:
+http://www.biwako.shiga-u.ac.jp/sensei/kumazawa/tex/lastpage.sty
