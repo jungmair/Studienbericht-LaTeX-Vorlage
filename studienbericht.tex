@@ -1,24 +1,21 @@
-\documentclass[a4paper,12pt,parskip=full]{article}
+\documentclass[a4paper,10pt]{article}
 \renewcommand{\familydefault}{\sfdefault}
+\usepackage[utf8]{inputenc}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{ae}%May be useful
 \usepackage[firstpage=true]{background}
-\usepackage{parskip} %"german" paragraphs
 \usepackage{graphicx} %needed for logo
-\usepackage{framed} %needed for "Wichtige studienbezogene Änderungen"
+\usepackage{framed} %needed for "Wichtige studienbezogene Aenderungen"
 \usepackage{amssymb} % needed for math
 \usepackage{amsmath} % needed for math
-\usepackage[utf8]{inputenc} % this is needed for umlauts
 \usepackage[ngerman]{babel} % this is needed for umlauts
 \usepackage[T1]{fontenc}    % this is needed for correct output of umlauts in pdf
 \usepackage[margin=2.5cm]{geometry} %layout
 \usepackage{fancyhdr}  % needed for the footer
 \usepackage{lastpage}  % needed for the footer
-\usepackage{hyperref}  % links im text
+\usepackage{hyperref}  % links in text
 \usepackage{tabularx}
-\usepackage{blindtext} %only needed for testing/ demo purposes
-\clubpenalty  = 10000 % Schusterjungen verhindern
-\widowpenalty = 10000 % Hurenkinder verhindern
+\usepackage{blindtext}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -40,9 +37,9 @@
 \newcommand{\Referent}{Hans Müller}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \hypersetup{
-  pdfauthor   = {\Vorname~\Nachname},
-  pdfkeywords = {Studienstiftung; \University; \Vorname~\Nachname},
-  pdftitle    = {Semesterbericht von~\Vorname~\Nachname~-~\Semester~\Jahr}
+pdfauthor = {\Vorname~\Nachname},
+pdfkeywords = {Studienstiftung; \University; \Vorname~\Nachname},
+pdftitle = {Semesterbericht von~\Vorname~\Nachname~-~\Semester~\Jahr}
 }
 \pagestyle{fancy}
 \fancyhf{}
@@ -61,48 +58,78 @@
 \pagenumbering{arabic}
 
 \begin{document}
+    \setcounter{secnumdepth}{-1}
 
-\title{Studienbericht über das zurückliegende Semester: \Semester \Jahr}
-\author{\Vorname \Nachname}
-\date{\Datum}
+    \title{Studienbericht über das zurückliegende Semester: \Semester \Jahr}
+    \author{\Vorname \Nachname}
+    \date{\Datum}
 
-\section*{Studienbericht über das zurückliegende Semester: \Semester~\Jahr}
+    \section{Studienbericht über das zurückliegende Semester: \Semester~\Jahr}
 
-\begin{tabularx}{\textwidth}{@{}llX}
-Name, Vorname:   & \Nachname, \Vorname \\
-E-Mail:           &\href{mailto:\Email}{\nolinkurl{\Email} } \\
-Hochschule         & \University \\
-Studienfach         & \Studienfach \\
-Aktuelle Zahl der Fachsemester: & \Semesteranzahl \\
-Aktuelle Semesterzahl
-(Studiensemester\\ seit Studienbeginn):        & \Semesteranzahl \\
-Angestrebter Studienabschluss in der \\
-aktuellen Studienphase: & \Abschluss \\
-Vertrauensdozent    & \Vertrauensdozent \\
-Referent            & \Referent \\
-\end{tabularx}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Hier bitte Text einfügen!                                         %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Einleitende Zusammenfassung}
-\subsubsection*{1. Auf diesem Stand ist jetzt mein Studium:}
-\blindtext
-\subsubsection*{2. Wichtige studienbezogene Änderungen}
-\begin{framed}\noindent
-Meine studienbezogene oder persönliche Situation wird sich verändern oder hat sich bereits wesentlich verändert (im Bereich des Studiums z.B. Wechsel des Studienfachs, Wechsel der Hochschule, Auslandsaufenthalt, Wechsel in der Ausrichtung des Studienziels, Unterbrechung des Studiums oder verzögerter Studienverlauf, längere nicht-obligatorische Praktika; im persönlichen Bereich z.B. Erkrankung, Eheschließung, Geburt eines Kindes).\end{framed} 
-~~~~$\boxtimes$ Nein
+    \begin{tabularx}{\textwidth}{@{}llX}
+        Name, Vorname: & \Nachname, \Vorname \\
+        E-Mail: &\href{mailto:\Email}{\nolinkurl{\Email} } \\
+        Hochschule & \University \\
+        Studienfach & \Studienfach \\
+        Aktuelle Zahl der Fachsemester: & \Semesteranzahl \\
+        Aktuelle Semesterzahl
+        (Studiensemester\\ seit Studienbeginn): & \Semesteranzahl \\
+        Angestrebter Studienabschluss in der \\
+        aktuellen Studienphase: & \Abschluss \\
+        Vertrauensdozent/-in & \Vertrauensdozent \\
+        Referent/-in & \Referent \\
+    \end{tabularx}
 
-~~~~$\square$ Ja, und zwar...
-\subsubsection*{3. Das war für mich außerhalb des Studiums von großer Bedeutung:}
-\blindtext
-\subsubsection*{4. Für das nächste Semester habe ich folgende Pläne:}
-\blindtext
-\subsection*{Ausführlicher Bericht}
-\Blindtext
-~\\
-\Ort, der \Datum\\
-\\
-\Vorname~\Nachname
+    \small{\emph{Der ausführliche Studienbericht ermöglicht Vertrauensdozent/-in und Referent/-in Einblick in Ihren Studienverlauf, Ihre Aktivitäten und Interessen außerhalb des Studiums und Ihre weiteren Pläne. Gleichzeitig soll der Bericht Sie zu einer persönlichen Reflexion über das zurückliegende Semester anregen. Falls Sie Fragen oder Gesprächsbedarf haben oder sich wesentliche änderungen außerhalb dieses Berichtsturnus ergeben, insbesondere im Bereich Ihrer Studienplanung, wenden Sie sich bitte jederzeit direkt an Ihre Ansprechpartner/-innen in der Geschäftsstelle.}} \normalsize
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % Hier bitte Text einfügen!                                         %
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \subsection{Einleitende Zusammenfassung}
+    \subsubsection{1. Auf diesem Stand ist jetzt mein Studium:}
+
+    \blindtext
+
+    \subsubsection{2. Wichtige studienbezogene änderungen}
+    \begin{framed}
+        \noindent
+        Meine studienbezogene oder persönliche Situation wird sich verändern oder hat sich bereits wesentlich verändert
+        (im Bereich des \textbf{Studiums} z.B. Wechsel des Studienfachs, Wechsel der Hochschule, Auslandsaufenthalt,
+        Wechsel in der Ausrichtung des Studienziels, Unterbrechung des Studiums oder verzögerter Studienverlauf,
+        längere nicht-obligatorische Praktika;
+        im \textbf{persönlichen Bereich} z.B. Erkrankung, Eheschließung, Geburt eines Kindes).
+    \end{framed}
+
+    ~\\
+    $\boxtimes$ Nein
+    ~\\
+    $\square$ Ja, und zwar...
+
+    \begin{framed}
+        \noindent
+        \small{Hinweis zu finanziellen änderungen:\\
+        Sollten Sie ein Grundstipendium erhalten und Ihre finanzielle Situation ändert sich (z.B. änderung Ihrer Einkünfte,
+        änderung der finanziellen Situation Ihrer Familie), teilen Sie diese änderung bitte direkt dem für Sie
+        zuständigen
+        Ansprechpartner in unserer Stipendienberechnung mit.} \normalsize
+    \end{framed}
+    \subsubsection{3. Das war für mich außerhalb des Studiums von großer Bedeutung:}
+
+    \blindtext
+
+    \subsubsection{4. Für das nächste Semester habe ich folgende Pläne:}
+
+    \blindtext
+
+    \newpage
+
+    \subsection{Ausführlicher Bericht (2 - 3 Seiten)}
+
+    \Blindtext
+
+    ~\\
+    \Ort, den \Datum\\
+    \\
+    \Vorname~\Nachname
 
 
 \end{document}
